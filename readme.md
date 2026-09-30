@@ -1,6 +1,6 @@
 # FreelaMG
 
-[🇧🇷 Português](#freelamg-ptbr)
+[Português 🇧🇷](#freelamg-ptbr)
 
 > The Minas Gerais marketplace: the direct connection between local talent and those who need it.
 
