@@ -1,6 +1,6 @@
-[Português :brazil:](#freelamg-ptbr)
-
 # FreelaMG
+
+[🇧🇷 Português](#freelamg-ptbr)
 
 > The Minas Gerais marketplace: the direct connection between local talent and those who need it.
 
@@ -17,39 +17,41 @@
 ### Visitor
 
 | Home Page | Sign Up |
-| :---: | :---: |
-| <img src="readme-img/img/index.png" width="400" alt="FreelaMG Home Page"> | <img src="readme-img/img/cadastro.png" width="400" alt="Sign up screen"> |
+| --- | --- |
+| ![FreelaMG Home Page](readme-img/img/index.png) | ![Sign up screen](readme-img/img/cadastro.png) |
 
 ### Freelancer Mode
 
 | Find Jobs | My Profile |
-| :---: | :---: |
-| <img src="readme-img/img/vagas.png" width="400" alt="Job listing with filters"> | <img src="readme-img/img/perfil.png" width="400" alt="Freelancer profile"> |
+| --- | --- |
+| ![Job listing with filters](readme-img/img/vagas.png) | ![Freelancer profile](readme-img/img/perfil.png) |
 
 | Messages | Notifications |
-| :---: | :---: |
-| <img src="readme-img/img/mensagens.png" width="400" alt="Chat between users"> | <img src="readme-img/img/notificacoes.png" width="400" alt="Notification center"> |
+| --- | --- |
+| ![Chat between users](readme-img/img/mensagens.png) | ![Notification center](readme-img/img/notificacoes.png) |
 
 ### Client Mode (Recruiter Area)
 
 | Post a Job | Manage Applications |
-| :---: | :---: |
-| <img src="readme-img/img/publicar-vaga.png" width="400" alt="Job posting form"> | <img src="readme-img/img/gerenciar-candidaturas.png" width="400" alt="Application management"> |
+| --- | --- |
+| ![Job posting form](readme-img/img/publicar-vaga.png) | ![Application management](readme-img/img/gerenciar-candidaturas.png) |
 
 | Find Talent |
-| :---: |
-| <img src="readme-img/img/talentos.png" width="400" alt="Talent directory"> |
+| --- |
+| ![Talent directory](readme-img/img/talentos.png) |
 
 <details>
-<summary>View other screens</summary>
+<summary><b>View other screens</b></summary>
+
+<br>
 
 | Login | Complete Registration |
-| :---: | :---: |
-| <img src="readme-img/img/login.png" width="400" alt="Login screen"> | <img src="readme-img/img/cadastro-completo.png" width="400" alt="Complementary registration"> |
+| --- | --- |
+| ![Login screen](readme-img/img/login.png) | ![Complementary registration](readme-img/img/cadastro-completo.png) |
 
 | Settings |
-| :---: |
-| <img src="readme-img/img/configuracoes.png" width="400" alt="Account settings"> |
+| --- |
+| ![Account settings](readme-img/img/configuracoes.png) |
 
 </details>
 
@@ -68,6 +70,7 @@
 ## ✨ Features
 
 **General**
+
 - Home page featuring the platform presentation, categories, recent jobs, and highlighted freelancers.
 - Two-step registration (credentials and profile type selection) and a complementary registration form (phone, birth date, and address).
 - Login screen.
@@ -75,17 +78,20 @@
 - Responsive layout for smaller screens (768px breakpoint).
 
 **Freelancer Mode**
+
 - Job listings with category and location filters, plus a search bar.
 - Apply button available on every job posting.
 - Public profile and settings page (personal data and password).
 - Availability toggle to receive project invitations.
 
 **Client Mode (Recruiter Area)**
+
 - Job posting form with dynamic fields that adapt to the work model (on-site or remote) and compensation type (fixed or negotiable).
 - Application management per job (accept, chat, or contact).
 - Talent directory featuring filters by specialty and rating, with direct project invitations.
 
 **Communication**
+
 - Chat interface with a conversation list and message history.
 - Notification center with visual cues for new and read items.
 
@@ -117,9 +123,9 @@ No external libraries, frameworks, or build steps are required.
 
 ## 📁 Folder Structure
 
-```text
+```
 freelamg/
-├── README.md
+├── readme.md
 ├── index.html
 ├── login.html
 ├── cadastro.html
@@ -151,11 +157,13 @@ freelamg/
 
 No installation is required.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/HugoDah/freelamg.git
-   cd freelamg
-   ```
+1. Clone the repository into a folder named `freelamg`:
+
+```bash
+git clone https://github.com/HugoDah/-projeto-freela.git freelamg
+cd freelamg
+```
+
 2. Open the `index.html` file in your browser (double-click it or drag it into the browser window).
 
 If you prefer to use a local development server:
@@ -185,7 +193,7 @@ The project leverages modern CSS features to deliver interactive elements **with
 - **Publish button:** Changes color when the form is fully valid (`:valid`).
 - **Centralized theme:** Colors, borders, shadows, and fonts are defined globally as CSS variables in `global.css`.
 
-## ⚠️ Current Limitations
+## 🚧 Current Limitations
 
 - Login, registration, and form submissions only **navigate between pages**; no data is sent or stored.
 - Search bars, filters, and action buttons (Apply, Accept, Invite to Project, Send Message, Save Changes) are **not functional yet**.
@@ -195,6 +203,7 @@ The project leverages modern CSS features to deliver interactive elements **with
 ## 👥 Authors
 
 - **Hugo Ribeiro Daher**: [@HugoDah](https://github.com/HugoDah)
+<!-- Add the other team members here, following the same format as above. -->
 
 ## 📝 About
 
@@ -202,14 +211,14 @@ This is an academic project developed for study purposes. All rights reserved to
 
 ---
 
-<p align="center">Made in Minas Gerais, fueled by coffee and pão de queijo ☕🧀</p>
+Made in Minas Gerais, fueled by coffee and pão de queijo ☕🧀
 
-
-*Read in English: [readme_.md](readme.md)*
-
+---
 ---
 
 # FreelaMG-PTBR
+
+[🇺🇸 English](#freelamg)
 
 > O marketplace de Minas Gerais: a conexão direta entre o talento mineiro e quem precisa dele.
 
@@ -226,39 +235,41 @@ O **FreelaMG** é uma plataforma web que conecta **freelancers** e **clientes** 
 ### Visitante
 
 | Página inicial | Cadastro |
-| :---: | :---: |
-| <img src="readme-img/img/index.png" width="400" alt="Página inicial do FreelaMG"> | <img src="readme-img/img/cadastro.png" width="400" alt="Tela de cadastro"> |
+| --- | --- |
+| ![Página inicial do FreelaMG](readme-img/img/index.png) | ![Tela de cadastro](readme-img/img/cadastro.png) |
 
 ### Modo Freelancer
 
 | Encontrar vagas | Meu perfil |
-| :---: | :---: |
-| <img src="readme-img/img/vagas.png" width="400" alt="Listagem de vagas com filtros"> | <img src="readme-img/img/perfil.png" width="400" alt="Perfil do freelancer"> |
+| --- | --- |
+| ![Listagem de vagas com filtros](readme-img/img/vagas.png) | ![Perfil do freelancer](readme-img/img/perfil.png) |
 
 | Mensagens | Notificações |
-| :---: | :---: |
-| <img src="readme-img/img/mensagens.png" width="400" alt="Chat entre usuários"> | <img src="readme-img/img/notificacoes.png" width="400" alt="Central de notificações"> |
+| --- | --- |
+| ![Chat entre usuários](readme-img/img/mensagens.png) | ![Central de notificações](readme-img/img/notificacoes.png) |
 
 ### Modo Cliente (Área do recrutador)
 
 | Publicar vaga | Gerenciar candidaturas |
-| :---: | :---: |
-| <img src="readme-img/img/publicar-vaga.png" width="400" alt="Formulário de publicação de vaga"> | <img src="readme-img/img/gerenciar-candidaturas.png" width="400" alt="Gerenciamento de candidaturas"> |
+| --- | --- |
+| ![Formulário de publicação de vaga](readme-img/img/publicar-vaga.png) | ![Gerenciamento de candidaturas](readme-img/img/gerenciar-candidaturas.png) |
 
 | Encontrar talentos |
-| :---: |
-| <img src="readme-img/img/talentos.png" width="400" alt="Diretório de talentos"> |
+| --- |
+| ![Diretório de talentos](readme-img/img/talentos.png) |
 
 <details>
-<summary>Ver outras telas</summary>
+<summary><b>Ver outras telas</b></summary>
+
+<br>
 
 | Login | Cadastro completo |
-| :---: | :---: |
-| <img src="readme-img/img/login.png" width="400" alt="Tela de login"> | <img src="readme-img/img/cadastro-completo.png" width="400" alt="Cadastro complementar"> |
+| --- | --- |
+| ![Tela de login](readme-img/img/login.png) | ![Cadastro complementar](readme-img/img/cadastro-completo.png) |
 
 | Configurações |
-| :---: |
-| <img src="readme-img/img/configuracoes.png" width="400" alt="Configurações da conta"> |
+| --- |
+| ![Configurações da conta](readme-img/img/configuracoes.png) |
 
 </details>
 
@@ -277,6 +288,7 @@ O **FreelaMG** é uma plataforma web que conecta **freelancers** e **clientes** 
 ## ✨ Funcionalidades
 
 **Geral**
+
 - Página inicial com apresentação da plataforma, categorias, vagas recentes e freelancers em destaque
 - Cadastro em duas etapas (dados de acesso e escolha de perfil) e cadastro complementar com telefone, data de nascimento e endereço
 - Tela de login
@@ -284,17 +296,20 @@ O **FreelaMG** é uma plataforma web que conecta **freelancers** e **clientes** 
 - Layout responsivo para telas menores (breakpoint em 768px)
 
 **Modo Freelancer**
+
 - Listagem de vagas com filtros por categoria e localização e barra de busca
 - Botão de candidatura em cada vaga
 - Perfil público e página de configurações (dados pessoais e senha)
 - Controle de disponibilidade para receber convites de projetos
 
 **Modo Cliente (Área do recrutador)**
+
 - Formulário de publicação de vagas, com campos que se adaptam à modalidade (presencial ou remoto) e à remuneração (valor fixo ou a combinar)
 - Gerenciamento de candidaturas por vaga (aceitar, conversar ou entrar em contato)
 - Diretório de talentos com filtros por especialidade e avaliação, e convite direto para projetos
 
 **Comunicação**
+
 - Chat com lista de conversas e histórico de mensagens
 - Central de notificações com destaque visual para itens novos e lidos
 
@@ -326,9 +341,9 @@ Nenhuma biblioteca, framework ou etapa de build é necessária.
 
 ## 📁 Estrutura de pastas
 
-```text
+```
 freelamg/
-├── README.md
+├── readme.md
 ├── index.html
 ├── login.html
 ├── cadastro.html
@@ -360,11 +375,13 @@ freelamg/
 
 Não é preciso instalar nada.
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/HugoDah/freelamg.git
-   cd freelamg
-   ```
+1. Clone o repositório para uma pasta chamada `freelamg`:
+
+```bash
+git clone https://github.com/HugoDah/-projeto-freela.git freelamg
+cd freelamg
+```
+
 2. Abra o arquivo `index.html` no navegador (duplo clique ou arrastando para a janela).
 
 Se preferir usar um servidor local:
@@ -394,7 +411,7 @@ O projeto explora recursos modernos de CSS para entregar interações **sem Java
 - **Botão de publicar:** muda de cor quando o formulário está válido (`:valid`).
 - **Tema centralizado:** cores, bordas, sombras e fontes definidas como variáveis CSS em `global.css`.
 
-## ⚠️ Limitações atuais
+## 🚧 Limitações atuais
 
 - Login, cadastro e formulários apenas **navegam entre páginas**; nenhum dado é enviado ou salvo.
 - Busca, filtros e botões (Candidatar-me, Aceitar, Convidar para Projeto, Enviar mensagem, Guardar Alterações) ainda **não têm funcionalidade**.
@@ -404,13 +421,12 @@ O projeto explora recursos modernos de CSS para entregar interações **sem Java
 ## 👥 Autores
 
 - **Hugo Ribeiro Daher**: [@HugoDah](https://github.com/HugoDah)
+<!-- Adicione aqui os demais integrantes do grupo, no mesmo formato acima. -->
 
 ## 📝 Sobre
 
 Projeto acadêmico desenvolvido para fins de estudo. Todos os direitos reservados ao autor.
 
-
 ---
 
-<p align="center">Feito em Minas Gerais, à base de café e pão de queijo ☕🧀</p>
-
+Feito em Minas Gerais, à base de café e pão de queijo ☕🧀
