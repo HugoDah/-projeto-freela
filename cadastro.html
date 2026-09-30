@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registo | FreelaMG</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a href="index.html" class="pagina-inicial">&larr; Página Inicial</a>
+    </header>
+
+    <main>
+        <h2>Crie sua conta</h2>
+
+        <form class="form" action="cadastro-completo.html">
+            <!-- O TRUQUE AQUI: Checkbox invisível que controla a troca de tela -->
+            <input type="checkbox" id="trocar-etapa" class="esconder-checkbox">
+
+            <!-- ==============================
+                    ETAPA 1: CREDENCIAIS
+                =============================== -->
+            <div id="etapas-credenciais">
+                <div class="form-grupo">
+                    <label for="nome">Nome Completo:</label>
+                    <input id="nome" type="text" placeholder="Digite o seu NOME aqui" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" placeholder="insira seu email" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="senha">Senha:</label>
+                    <input id="senha" type="password" placeholder="Escreva sua senha aqui">
+                </div>
+
+                <!-- O botão "Continuar" agora é um label que ativa o checkbox acima -->
+                <label for="trocar-etapa" class="link-botao">Continuar</label>
+            </div>
+
+            <!-- ==============================
+                    ETAPA 2: ESCOLHA DE PERFIL
+                =============================== -->
+            <div id="etapa-perfil">
+                <p class="pergunta-perfil">Como deseja usar o FreelaMG?</p>
+
+                <div class="opcoes-perfil">
+                    <label class="cartao-opcao">
+                        <input type="radio" name="tipo_perfil" value="freelancer">
+                        <div class="cartao-conteudo">
+                            <span class="icone">💻</span>
+                            <strong>Quero trabalhar</strong>
+                            <p>Sou Freelancer procurando projetos</p>
+                        </div>
+                    </label>
+
+                    <label class="cartao-opcao">
+                        <input type="radio" name="tipo_perfil" value="cliente">
+                        <div class="cartao-conteudo">
+                            <span class="icone">🏢</span>
+                            <strong>Quero contratar</strong>
+                            <p>Sou Empresa/Cliente publicando vagas</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="botoes-acao">
+                    <!-- O botão "Voltar" clica novamente no checkbox para destrancar a Etapa 1 -->
+                    <label for="trocar-etapa" class="botao-voltar">Voltar</label>
+
+                    <!-- Este sim, é o botão que finaliza e envia o formulário real -->
+                    <input class="continuar" type="submit" value="Concluir Registo">
+                </div>
+            </div>
+
+            <section class="para-login">
+                <p class="pergunta-login">Já tem uma conta?</p>
+                <a class="link-login" href="login.html">Login</a>
+            </section>
+        </form>
+    </main>
+
+</body>
+
+</html>

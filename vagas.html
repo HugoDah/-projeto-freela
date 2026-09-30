@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Vagas | FreelaMG</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/vagas.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho de utilizador logado -->
+    <!-- Cabeçalho unificado -->
+    <header class="cabecalho-interno">
+        <div class="logotipo">
+            <a href="vagas.html">Freela<span>MG</span></a>
+        </div>
+
+        <nav class="navegacao-principal">
+            <a href="vagas.html" style="color: var(--cor-secundaria); font-weight: 700;">Encontrar Vagas</a>
+            <span style="color: #475569; margin: 0 0.625rem;">|</span>
+            <a href="talentos.html">Encontrar Talentos</a>
+
+            <!-- Novo link da Área do Recrutador -->
+            <a href="publicar-vaga.html" class="link-area-recrutador">Área do recrutador ➔</a>
+        </nav>
+
+        <nav class="navegacao-usuario">
+            <a href="mensagens.html">Mensagens</a>
+            <a href="notificacoes.html">Notificações</a>
+
+            <!-- Menu de Perfil (Dropdown nativo com CSS) -->
+            <details class="menu-perfil-container">
+                <summary class="botao-perfil-toggle">Meu Perfil</summary>
+
+                <div class="caixa-dropdown-perfil">
+                    <div class="dropdown-cabecalho">
+                        <strong>Nome ficticio</strong>
+                        <span class="modo-texto modo-freelancer">Modo: Freelancer</span>
+                        <span class="modo-texto modo-cliente">Modo: Cliente</span>
+                    </div>
+                    <hr class="divisor-dropdown">
+                    <a href="perfil.html" class="dropdown-item">Ver Meu Perfil</a>
+                    <a href="configuracoes.html" class="dropdown-item">Configurações</a>
+                    <hr class="divisor-dropdown">
+                    <div class="dropdown-item-interruptor">
+                        <span>Freelancer Ativo</span>
+                        <label class="interruptor-estado-pequeno">
+                            <input type="checkbox" id="check-modo-ativo" checked>
+                            <span class="cursor-interruptor-pequeno"></span>
+                        </label>
+                    </div>
+                </div>
+            </details>
+
+            <a href="index.html" class="botao-sair">Sair</a>
+        </nav>
+    </header>
+    <main class="painel-principal">
+
+        <!-- COLUNA ESQUERDA: Filtros -->
+        <aside class="filtros">
+            <h3>Filtros</h3>
+
+            <div class="grupo-filtro">
+                <label>Categoria</label>
+                <select>
+                    <option>Todas as categorias</option>
+                    <option>Construção Civil</option>
+                    <option>Tecnologia</option>
+                    <option>Gastronomia</option>
+                    <option>Eventos</option>
+                    <option>Saúde</option>
+                    <option>Educação</option>
+                    <option>Comércio</option>
+                    <option>Serviços</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <label>Localização</label>
+                <select>
+                    <option>Em toda a cidade</option>
+                    <option>Centro</option>
+                    <option>UEMG (Arredores)</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- COLUNA DIREITA: Busca e Resultados -->
+        <section class="conteudo-vagas">
+
+            <div class="barra-busca">
+                <input type="text" placeholder="Buscar por 'Garçom', 'HTML', 'Design'...">
+                <button class="btn-buscar">Procurar</button>
+            </div>
+
+            <div class="grade-vagas">
+
+                <!-- CARTÃO DE VAGA 1 -->
+                <article class="cartao-vaga">
+                    <div class="vaga-topo">
+                        <span class="tag tag-azul">TI & Programação</span>
+                        <span class="preco">R$ 150/dia</span>
+                    </div>
+                    <h3 class="vaga-titulo">Ajuste em Site (HTML/CSS)</h3>
+                    <p class="vaga-local">📍 Remoto (Passos, MG)</p>
+                    <p class="vaga-desc">Preciso de um estudante de Sistemas para arrumar o layout de um formulário no
+                        meu site. Trabalho rápido para o fim de semana.</p>
+                    <button class="btn-candidatar">Candidatar-me</button>
+                </article>
+
+                <!-- CARTÃO DE VAGA 2 -->
+                <article class="cartao-vaga">
+                    <div class="vaga-topo">
+                        <span class="tag tag-vermelha">Eventos</span>
+                        <span class="preco">R$ 100/noite</span>
+                    </div>
+                    <h3 class="vaga-titulo">Recepção de Evento</h3>
+                    <p class="vaga-local">📍 Centro, Passos</p>
+                    <p class="vaga-desc">Buscamos duas pessoas comunicativas para recepcionar convidados num evento
+                        universitário nesta sexta-feira à noite.</p>
+                    <button class="btn-candidatar">Candidatar-me</button>
+                </article>
+
+                <!-- CARTÃO DE VAGA 3 -->
+                <article class="cartao-vaga">
+                    <div class="vaga-topo">
+                        <span class="tag tag-azul">TI & Programação</span>
+                        <span class="preco">R$ 400/projeto</span>
+                    </div>
+                    <h3 class="vaga-titulo">Design de Interface (Figma)</h3>
+                    <p class="vaga-local">📍 Remoto (Belo Horizonte, MG)</p>
+                    <p class="vaga-desc">Procuro um designer para estruturar o layout de uma plataforma web no Figma.
+                        Preciso das telas de login, registo e painel principal desenhadas.</p>
+                    <button class="btn-candidatar">Candidatar-me</button>
+                </article>
+
+                <!-- CARTÃO DE VAGA 4 -->
+                <article class="cartao-vaga">
+                    <div class="vaga-topo">
+                        <span class="tag tag-vermelha">Manutenção</span>
+                        <span class="preco">R$ 80/serviço</span>
+                    </div>
+                    <h3 class="vaga-titulo">Instalação de SSD NVMe</h3>
+                    <p class="vaga-local">📍 Presencial (Passos, MG)</p>
+                    <p class="vaga-desc">Preciso de ajuda técnica para instalar um SSD NVMe M.2 novo no meu computador e
+                        formatar o Windows. Trabalho rápido para quem tem experiência com hardware.</p>
+                    <button class="btn-candidatar">Candidatar-me</button>
+                </article>
+
+                <!-- CARTÃO DE VAGA 5 -->
+                <article class="cartao-vaga">
+                    <div class="vaga-topo">
+                        <span class="tag tag-azul">Game Dev</span>
+                        <span class="preco">R$ 250/projeto</span>
+                    </div>
+                    <h3 class="vaga-titulo">Scripts em C++ (Unreal Engine)</h3>
+                    <p class="vaga-local">📍 Remoto</p>
+                    <p class="vaga-desc">Procuro um programador com conhecimentos em C/C++ para ajudar a otimizar alguns
+                        scripts básicos de movimentação num projeto pessoal na Unreal Engine 5.</p>
+                    <button class="btn-candidatar">Candidatar-me</button>
+                </article>
+
+                <!-- CARTÃO DE VAGA 6 -->
+                <article class="cartao-vaga">
+                    <div class="vaga-topo">
+                        <span class="tag tag-vermelha">Audiovisual</span>
+                        <span class="preco">R$ 50/vídeo</span>
+                    </div>
+                    <h3 class="vaga-titulo">Edição de Cortes (Twitch)</h3>
+                    <p class="vaga-local">📍 Remoto</p>
+                    <p class="vaga-desc">Preciso de um editor de vídeo para pegar nas gravações das minhas transmissões
+                        na Twitch e criar cortes dinâmicos para o TikTok e Reels.</p>
+                    <button class="btn-candidatar">Candidatar-me</button>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape-texto">Feito em MINAS GERAIS</p>
+        <p class="rodape-texto"> A base de café e pão de queijo &#9749; &#129472; </p>
+    </footer>
+
+
+</body>
+
+</html>

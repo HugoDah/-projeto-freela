@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar Talentos | FreelaMG</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/vagas.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho unificado -->
+    <header class="cabecalho-interno">
+        <div class="logotipo">
+            <a href="vagas.html">Freela<span>MG</span></a>
+        </div>
+
+        <nav class="navegacao-principal">
+            <a href="vagas.html">Encontrar Vagas</a>
+            <span style="color: #475569; margin: 0 0.625rem;">|</span>
+            <a href="talentos.html" style="color: var(--cor-secundaria); font-weight: 700;">Encontrar Talentos</a>
+
+            <!-- Novo link da Área do Recrutador -->
+            <a href="publicar-vaga.html" class="link-area-recrutador">Área do recrutador ➔</a>
+        </nav>
+
+        <nav class="navegacao-usuario">
+            <a href="mensagens.html">Mensagens</a>
+            <a href="notificacoes.html">Notificações</a>
+
+            <!-- Menu de Perfil (Dropdown nativo com CSS) -->
+            <details class="menu-perfil-container">
+                <summary class="botao-perfil-toggle">Meu Perfil</summary>
+
+                <div class="caixa-dropdown-perfil">
+                    <div class="dropdown-cabecalho">
+                        <strong>Nome ficticio</strong>
+                        <span class="modo-texto modo-freelancer">Modo: Freelancer</span>
+                        <span class="modo-texto modo-cliente">Modo: Cliente</span>
+                    </div>
+                    <hr class="divisor-dropdown">
+                    <a href="perfil.html" class="dropdown-item">Ver Meu Perfil</a>
+                    <a href="configuracoes.html" class="dropdown-item">Configurações</a>
+                    <hr class="divisor-dropdown">
+                    <div class="dropdown-item-interruptor">
+                        <span>Freelancer Ativo</span>
+                        <label class="interruptor-estado-pequeno">
+                            <input type="checkbox" id="check-modo-ativo" checked>
+                            <span class="cursor-interruptor-pequeno"></span>
+                        </label>
+                    </div>
+                </div>
+            </details>
+
+            <a href="index.html" class="botao-sair">Sair</a>
+        </nav>
+    </header>
+
+    <main class="painel-principal">
+
+        <!-- COLUNA ESQUERDA: Filtros de Freelancers -->
+        <aside class="filtros">
+            <h3>Filtros</h3>
+
+            <div class="grupo-filtro">
+                <label>Especialidade</label>
+                <select>
+                    <option>Todas as áreas</option>
+                    <option>Programação (TI)</option>
+                    <option>Design e Audiovisual</option>
+                    <option>Escrita e Tradução</option>
+                    <option>Marketing e Vendas</option>
+                </select>
+            </div>
+
+            <div class="grupo-filtro">
+                <label>Avaliação Mínima</label>
+                <select>
+                    <option>Qualquer pontuação</option>
+                    <option>★★★★★ (5.0)</option>
+                    <option>★★★★☆ (4.0)</option>
+                    <option>★★★☆☆ (3.0)</option>
+                    <option>★★☆☆☆ (2.0)</option>
+                    <option>★☆☆☆☆ (1.0)</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- COLUNA DIREITA: Busca e Perfis -->
+        <section class="conteudo-vagas">
+
+            <div class="barra-busca">
+                <input type="text" placeholder="Buscar por 'Desenvolvedor', 'Figma', 'C++'...">
+                <button class="btn-buscar">Procurar</button>
+            </div>
+
+            <!-- GRADE DE PERFIS -->
+            <div class="grade-vagas">
+
+                <!-- CARTÃO FREELANCER 1 -->
+                <div class="cartao-freela">
+                    <div class="cartao-freela-cabecalho">
+                        <img class="cartao-freela-foto" src="https://i.pravatar.cc/150" alt="Foto de Perfil">
+                        <div class="cartao-freela-info-topo">
+                            <h3 class="cartao-freela-nome">Nome ficticio</h3>
+                            <p class="cartao-freela-idade-local">19 anos &middot; Passos, MG</p>
+                            <div class="cartao-freela-avaliacao">
+                                <span class="cartao-freela-estrelas">★★★★★</span>
+                                <span class="cartao-freela-nota">5.0 &middot; 12 trabalhos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="cartao-freela-descricao">
+                        Desenvolvedor front-end apaixonado por criar interfaces limpas, estruturação de sistemas e
+                        soluções digitais responsivas.
+                    </p>
+                    <div class="cartao-freela-competencias">
+                        <span class="cartao-freela-tag">HTML/CSS</span>
+                        <span class="cartao-freela-tag">Figma</span>
+                        <span class="cartao-freela-tag">C/C++</span>
+                    </div>
+                    <button class="btn-candidatar" style="margin-top: 15px;">Convidar para Projeto</button>
+                </div>
+
+                <!-- CARTÃO FREELANCER 2 -->
+                <div class="cartao-freela">
+                    <div class="cartao-freela-cabecalho">
+                        <img class="cartao-freela-foto" src="https://i.pravatar.cc/170" alt="Foto de Perfil">
+                        <div class="cartao-freela-info-topo">
+                            <h3 class="cartao-freela-nome">Nome ficticio</h3>
+                            <p class="cartao-freela-idade-local">24 anos &middot; Belo Horizonte, MG</p>
+                            <div class="cartao-freela-avaliacao">
+                                <span class="cartao-freela-estrelas">★★★★☆</span>
+                                <span class="cartao-freela-nota">4.8 &middot; 23 trabalhos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="cartao-freela-descricao">
+                        Designer UX/UI focada em conversão. Crio protótipos de alta fidelidade e interfaces amigáveis
+                        para startups.
+                    </p>
+                    <div class="cartao-freela-competencias">
+                        <span class="cartao-freela-tag">Figma</span>
+                        <span class="cartao-freela-tag">Photoshop</span>
+                        <span class="cartao-freela-tag">Ilustração</span>
+                    </div>
+                    <button class="btn-candidatar" style="margin-top: 15px;">Convidar para Projeto</button>
+                </div>
+
+                <!-- CARTÃO FREELANCER 3 -->
+                <div class="cartao-freela">
+                    <div class="cartao-freela-cabecalho">
+                        <img class="cartao-freela-foto" src="https://i.pravatar.cc/155" alt="Foto de Perfil">
+                        <div class="cartao-freela-info-topo">
+                            <h3 class="cartao-freela-nome">Carlos Eduardo</h3>
+                            <p class="cartao-freela-idade-local">20 anos &middot; Passos, MG</p>
+                            <div class="cartao-freela-avaliacao">
+                                <span class="cartao-freela-estrelas">★★★★★</span>
+                                <span class="cartao-freela-nota">5.0 &middot; 8 trabalhos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="cartao-freela-descricao">
+                        Estudante de Sistemas de Informação na UEMG. Tenho foco em programação C/C++ e conhecimentos
+                        básicos em modelação 3D com Blender e Unreal Engine.
+                    </p>
+                    <div class="cartao-freela-competencias">
+                        <span class="cartao-freela-tag">C/C++</span>
+                        <span class="cartao-freela-tag">Unreal Engine</span>
+                        <span class="cartao-freela-tag">Blender</span>
+                    </div>
+                    <button class="btn-candidatar" style="margin-top: 15px;">Convidar para Projeto</button>
+                </div>
+
+                <!-- CARTÃO FREELANCER 4 -->
+                <div class="cartao-freela">
+                    <div class="cartao-freela-cabecalho">
+                        <img class="cartao-freela-foto" src="https://i.pravatar.cc/165" alt="Foto de Perfil">
+                        <div class="cartao-freela-info-topo">
+                            <h3 class="cartao-freela-nome">Mariana Costa</h3>
+                            <p class="cartao-freela-idade-local">22 anos &middot; Juiz de Fora, MG</p>
+                            <div class="cartao-freela-avaliacao">
+                                <span class="cartao-freela-estrelas">★★★★★</span>
+                                <span class="cartao-freela-nota">4.9 &middot; 15 trabalhos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="cartao-freela-descricao">
+                        Especialista em cibersegurança com formação em bootcamps intensivos. Faço auditorias
+                        básicas, proteção de redes e consultoria para pequenas empresas.
+                    </p>
+                    <div class="cartao-freela-competencias">
+                        <span class="cartao-freela-tag">Cibersegurança</span>
+                        <span class="cartao-freela-tag">Redes</span>
+                        <span class="cartao-freela-tag">Linux</span>
+                    </div>
+                    <button class="btn-candidatar" style="margin-top: 15px;">Convidar para Projeto</button>
+                </div>
+
+                <!-- CARTÃO FREELANCER 5 -->
+                <div class="cartao-freela">
+                    <div class="cartao-freela-cabecalho">
+                        <img class="cartao-freela-foto" src="https://i.pravatar.cc/175" alt="Foto de Perfil">
+                        <div class="cartao-freela-info-topo">
+                            <h3 class="cartao-freela-nome">João Pedro</h3>
+                            <p class="cartao-freela-idade-local">25 anos &middot; Uberlândia, MG</p>
+                            <div class="cartao-freela-avaliacao">
+                                <span class="cartao-freela-estrelas">★★★★☆</span>
+                                <span class="cartao-freela-nota">4.7 &middot; 42 trabalhos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="cartao-freela-descricao">
+                        Designer Gráfico com experiência no mercado corporativo. Construo identidades visuais
+                        modernas, logótipos e apresentações de alto impacto para startups.
+                    </p>
+                    <div class="cartao-freela-competencias">
+                        <span class="cartao-freela-tag">Illustrator</span>
+                        <span class="cartao-freela-tag">Photoshop</span>
+                        <span class="cartao-freela-tag">Branding</span>
+                    </div>
+                    <button class="btn-candidatar" style="margin-top: 15px;">Convidar para Projeto</button>
+                </div>
+
+                <!-- CARTÃO FREELANCER 6 (Adicional) -->
+                <div class="cartao-freela">
+                    <div class="cartao-freela-cabecalho">
+                        <img class="cartao-freela-foto" src="https://i.pravatar.cc/180" alt="Foto de Perfil">
+                        <div class="cartao-freela-info-topo">
+                            <h3 class="cartao-freela-nome">Lucas Mendes</h3>
+                            <p class="cartao-freela-idade-local">23 anos &middot; Poços de Caldas, MG</p>
+                            <div class="cartao-freela-avaliacao">
+                                <span class="cartao-freela-estrelas">★★★★★</span>
+                                <span class="cartao-freela-nota">5.0 &middot; 19 trabalhos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="cartao-freela-descricao">
+                        Redator SEO e criador de conteúdo digital. Ajudo marcas a posicionarem os seus sites no topo
+                        do Google através de artigos estratégicos e copywriting envolvente.
+                    </p>
+                    <div class="cartao-freela-competencias">
+                        <span class="cartao-freela-tag">SEO</span>
+                        <span class="cartao-freela-tag">Copywriting</span>
+                        <span class="cartao-freela-tag">WordPress</span>
+                    </div>
+                    <button class="btn-candidatar" style="margin-top: 15px;">Convidar para Projeto</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape-texto">Feito em MINAS GERAIS</p>
+        <p class="rodape-texto"> A base de café e pão de queijo &#9749; &#129472; </p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Vaga | FreelaMG</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cliente.css">
+</head>
+
+<body>
+    <!-- Cabeçalho unificado -->
+    <header class="cabecalho-interno">
+        <div class="logotipo">
+            <a href="vagas.html">Freela<span>MG</span></a>
+        </div>
+        <nav class="navegacao-principal">
+            <a href="publicar-vaga.html" style="color: var(--cor-secundaria); font-weight: 700;">Publicar Vaga</a>
+            <span style="color: #475569; margin: 0 10px;">|</span>
+            <a href="gerenciar-candidaturas.html">Gerenciar Candidaturas</a>
+            <a href="vagas.html" class="link-area-recrutador"> Area do freelancer➔</a>
+        </nav>
+
+
+        <nav class="navegacao-usuario">
+            <a href="mensagens.html">Mensagens</a>
+            <a href="notificacoes.html">Notificações</a>
+            <details class="menu-perfil-container">
+                <summary class="botao-perfil-toggle">Meu Perfil</summary>
+                <div class="caixa-dropdown-perfil">
+                    <div class="dropdown-cabecalho">
+                        <strong>Nome ficticio</strong>
+                        <span class="modo-texto modo-freelancer">Modo: Freelancer</span>
+                        <span class="modo-texto modo-cliente">Modo: Cliente</span>
+                    </div>
+                    <hr class="divisor-dropdown">
+                    <div class="dropdown-item-interruptor">
+                        <span>Freelancer Ativo</span>
+                        <label class="interruptor-estado-pequeno">
+                            <input type="checkbox" id="check-modo-ativo">
+                            <span class="cursor-interruptor-pequeno"></span>
+                        </label>
+                    </div>
+                </div>
+            </details>
+            <a href="index.html" class="botao-sair">Sair</a>
+        </nav>
+    </header>
+
+    <main class="painel-cliente">
+        <div class="cabecalho-secao">
+            <h2>Publicar uma nova vaga</h2>
+            <p>Preencha os detalhes abaixo para encontrar o talento ideal para o seu projeto em Minas Gerais.</p>
+        </div>
+
+        <form class="formulario-vaga" action="gerenciar-candidaturas.html">
+            <div class="grupo-input">
+                <label>Título da Vaga</label>
+                <input type="text" placeholder="Ex: Criação de Logotipo, Ajuste em HTML..." required>
+            </div>
+
+            <div class="linha-form">
+                <div class="grupo-input">
+                    <label>Categoria</label>
+                    <select required>
+                        <option value="" disabled selected>Selecione uma área...</option>
+                        <option>Construção Civil</option>
+                        <option>Tecnologia</option>
+                        <option>Gastronomia</option>
+                        <option>Eventos</option>
+                        <option>Saúde</option>
+                        <option>Educação</option>
+                        <option>Comércio</option>
+                        <!-- Categoria substituída e colocada por último -->
+                        <option>Marketing e Design</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label>Modalidade de Trabalho</label>
+                    <div class="grupo-opcoes-radio">
+                        <label class="opcao-radio">
+                            <input type="radio" name="modalidade" id="radio-presencial" checked> Presencial
+                        </label>
+                        <label class="opcao-radio">
+                            <input type="radio" name="modalidade" id="radio-remoto"> Remoto
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caixas de Localização (Alternam automaticamente com CSS) -->
+            <div class="grupo-input campo-local-presencial">
+                <label>Cidade / Bairro (Presencial)</label>
+                <input type="text" placeholder="Ex: Centro, Passos">
+            </div>
+            <div class="grupo-input campo-local-remoto">
+                <label>Localização (Remoto)</label>
+                <input type="text" value="Trabalho 100% Remoto" class="input-desativado" disabled>
+            </div>
+
+            <div class="linha-form">
+                <div class="grupo-input">
+                    <label>Remuneração</label>
+                    <div class="grupo-opcoes-radio">
+                        <label class="opcao-radio">
+                            <input type="radio" name="salario" id="radio-combinar" checked> A Combinar
+                        </label>
+                        <label class="opcao-radio">
+                            <input type="radio" name="salario" id="radio-fixo"> Valor Fixo
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Só aparece se "Valor Fixo" estiver selecionado -->
+                <div class="grupo-input campo-salario-fixo">
+                    <label>Orçamento Disponível (R$)</label>
+                    <input type="number" placeholder="Ex: 500">
+                </div>
+            </div>
+
+            <div class="grupo-input">
+                <label>Descrição do Projeto</label>
+                <textarea placeholder="Explique detalhadamente o que o freelancer terá de fazer..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-publicar">Publicar Vaga na Plataforma</button>
+        </form>
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape-texto">Feito em MINAS GERAIS</p>
+        <p class="rodape-texto"> A base de café e pão de queijo &#9749; &#129472; </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil | FreelaMG</title>
+    <link rel="stylesheet" href="css/global.css">
+
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho unificado -->
+    <header class="cabecalho-interno">
+        <div class="logotipo">
+            <a href="vagas.html">Freela<span>MG</span></a>
+        </div>
+
+        <nav class="navegacao-principal">
+            <a href="vagas.html">Encontrar Vagas</a>
+            <span style="color: #475569; margin: 0 0.625rem;">|</span>
+            <a href="talentos.html">Encontrar Talentos</a>
+
+            <!-- Novo link da Área do Recrutador -->
+            <a href="publicar-vaga.html" class="link-area-recrutador">Área do recrutador ➔</a>
+        </nav>
+
+        <nav class="navegacao-usuario">
+            <a href="mensagens.html">Mensagens</a>
+            <a href="notificacoes.html">Notificações</a>
+
+            <!-- Menu de Perfil (Dropdown nativo com CSS) -->
+            <details class="menu-perfil-container">
+                <summary class="botao-perfil-toggle" style="color: var(--cor-secundaria); font-weight: 700;">Meu Perfil
+                </summary>
+
+                <div class="caixa-dropdown-perfil">
+                    <div class="dropdown-cabecalho">
+                        <strong>Nome ficticio</strong>
+                        <span class="modo-texto modo-freelancer">Modo: Freelancer</span>
+                        <span class="modo-texto modo-cliente">Modo: Cliente</span>
+                    </div>
+                    <hr class="divisor-dropdown">
+                    <a href="perfil.html" class="dropdown-item">Ver Meu Perfil</a>
+                    <a href="configuracoes.html" class="dropdown-item">Configurações</a>
+                    <hr class="divisor-dropdown">
+                    <div class="dropdown-item-interruptor">
+                        <span>Freelancer Ativo</span>
+                        <label class="interruptor-estado-pequeno">
+                            <input type="checkbox" id="check-modo-ativo" checked>
+                            <span class="cursor-interruptor-pequeno"></span>
+                        </label>
+                    </div>
+                </div>
+            </details>
+
+            <a href="index.html" class="botao-sair">Sair</a>
+        </nav>
+    </header>
+
+    <!-- Estrutura Principal do Perfil -->
+    <main class="painel-perfil">
+
+        <!-- BARRA LATERAL DE OPÇÕES DO PERFIL -->
+        <aside class="menu-lateral-perfil">
+            <div class="cabecalho-usuario-perfil">
+                <img src="https://i.pravatar.cc/150" alt="Foto de Utilizador" class="foto-perfil-usuario">
+                <h3 class="nome-usuario-perfil">Nome Ficticio</h3>
+                <p class="tipo-conta-atual">Modo: <strong>Freelancer</strong></p>
+            </div>
+
+            <ul class="lista-opcoes-perfil">
+                <li><a href="perfil.html" class="opcao-menu ativa">Ver Meu Perfil</a></li>
+                <li><a href="configuracoes.html" class="opcao-menu">Configurações</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTEÚDO DA PÁGINA: VISUALIZAÇÃO E ESTADO -->
+        <section class="conteudo-painel-perfil">
+
+            <div class="bloco-secao-perfil">
+                <h2>Visualização do Perfil</h2>
+                <p class="descricao-secao">Esta é a forma como os outros utilizadores veem o seu perfil na plataforma.
+                </p>
+
+                <div class="cartao-visualizacao-perfil">
+                    <div class="topo-cartao-perfil">
+                        <img src="https://i.pravatar.cc/150" alt="Foto" class="foto-cartao-perfil">
+                        <div>
+                            <h3>Nome ficticio</h3>
+                            <p class="localizacao-perfil">19 anos &middot; Passos, MG</p>
+                            <span class="badge-modo">Freelancer Ativo</span>
+                        </div>
+                    </div>
+                    <p class="biografia-perfil">
+                        Estudante de Sistemas de Informação na UEMG. Foco em desenvolvimento front-end, estruturação de
+                        páginas web e estudos em C/C++.
+                    </p>
+                    <div class="competencias-perfil">
+                        <span class="etiqueta-competencia">HTML/CSS</span>
+                        <span class="etiqueta-competencia">C/C++</span>
+                        <span class="etiqueta-competencia">Figma</span>
+                        <span class="etiqueta-competencia">Git</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTROLO DE DISPONIBILIDADE -->
+            <div class="bloco-secao-perfil">
+                <h2>Estado Profissional</h2>
+                <p class="descricao-secao">Controle se o seu perfil aparece disponível para receber propostas no
+                    diretório de talentos.</p>
+
+                <div class="caixa-estado-freelancer">
+                    <div>
+                        <h4>Disponível para Trabalhos</h4>
+                        <p>Quando ativado, os clientes podem enviar-lhe convites diretos para projetos.</p>
+                    </div>
+                    <!-- Interruptor visual simples -->
+                    <label class="interruptor-estado">
+                        <input type="checkbox" checked>
+                        <span class="cursor-interruptor"></span>
+                    </label>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="rodape">
+        <p class="rodape-texto">Feito em MINAS GERAIS</p>
+        <p class="rodape-texto"> A base de café e pão de queijo &#9749; &#129472; </p>
+    </footer>
+</body>
+
+</html>

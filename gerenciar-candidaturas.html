@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Candidaturas | FreelaMG</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cliente.css">
+</head>
+
+<body>
+    <!-- Cabeçalho unificado -->
+    <header class="cabecalho-interno">
+        <div class="logotipo">
+            <a href="vagas.html">Freela<span>MG</span></a>
+        </div>
+        <nav class="navegacao-principal">
+            <a href="publicar-vaga.html">Publicar Vaga</a>
+            <span style="color: #475569; margin: 0 0.625rem;">|</span>
+            <a href="gerenciar-candidaturas.html" style="color: var(--cor-secundaria); font-weight: 700;">Gerenciar
+                Candidaturas</a>
+            <a href="vagas.html" class="link-area-recrutador"> Area do freelancer➔</a>
+
+        </nav>
+        <nav class="navegacao-usuario">
+            <a href="mensagens.html">Mensagens</a>
+            <a href="notificacoes.html">Notificações</a>
+            <details class="menu-perfil-container">
+                <summary class="botao-perfil-toggle">Meu Perfil</summary>
+                <div class="caixa-dropdown-perfil">
+                    <div class="dropdown-cabecalho">
+                        <strong>Nome ficticio</strong>
+                        <span class="modo-texto modo-freelancer">Modo: Freelancer</span>
+                        <span class="modo-texto modo-cliente">Modo: Cliente</span>
+                    </div>
+                    <hr class="divisor-dropdown">
+                    <div class="dropdown-item-interruptor">
+                        <span>Freelancer Ativo</span>
+                        <label class="interruptor-estado-pequeno">
+                            <input type="checkbox" id="check-modo-ativo">
+                            <span class="cursor-interruptor-pequeno"></span>
+                        </label>
+                    </div>
+                </div>
+            </details>
+            <a href="index.html" class="botao-sair">Sair</a>
+        </nav>
+    </header>
+
+    <main class="painel-cliente">
+        <div class="cabecalho-secao">
+            <h2>Gerenciar Candidaturas</h2>
+            <p>Analise os freelancers interessados nos seus projetos e escolha o melhor talento.</p>
+        </div>
+
+        <section class="lista-vagas-gerenciamento">
+
+            <!-- VAGA 1 -->
+            <article class="bloco-vaga">
+                <div class="topo-bloco-vaga">
+                    <h3>Design de Interface (Figma)</h3>
+                    <span class="badge-candidatos">2 Candidatos</span>
+                </div>
+                <div class="lista-candidatos">
+
+                    <!-- Candidato 1 -->
+                    <div class="cartao-candidato">
+                        <div class="info-candidato">
+                            <img src="https://i.pravatar.cc/170" alt="Candidato" class="foto-candidato">
+                            <div class="dados-candidato">
+                                <h4>Mariana Costa</h4>
+                                <p>Especialista em UX/UI &middot; Avaliação: 4.8 ★</p>
+                            </div>
+                        </div>
+                        <div class="botoes-acao">
+                            <button class="btn-acao btn-aceitar">Aceitar</button>
+                            <a href="mensagens.html" class="btn-acao btn-conversar">Conversar</a>
+                            <button class="btn-acao btn-contato">Entrar em Contato</button>
+                        </div>
+                    </div>
+
+                    <!-- Candidato 2 -->
+                    <div class="cartao-candidato">
+                        <div class="info-candidato">
+                            <img src="https://i.pravatar.cc/150" alt="Candidato" class="foto-candidato">
+                            <div class="dados-candidato">
+                                <h4>Nome ficticio</h4>
+                                <p>Estudante de Sistemas de Informação &middot; Avaliação: 5.0 ★</p>
+                            </div>
+                        </div>
+                        <div class="botoes-acao">
+                            <button class="btn-acao btn-aceitar">Aceitar</button>
+                            <a href="mensagens.html" class="btn-acao btn-conversar">Conversar</a>
+                            <button class="btn-acao btn-contato">Entrar em Contato</button>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- VAGA 2 -->
+            <article class="bloco-vaga">
+                <div class="topo-bloco-vaga">
+                    <h3>Ajuste em Site (HTML/CSS)</h3>
+                    <span class="badge-candidatos">1 Candidato</span>
+                </div>
+                <div class="lista-candidatos">
+
+                    <!-- Candidato 1 -->
+                    <div class="cartao-candidato">
+                        <div class="info-candidato">
+                            <img src="https://i.pravatar.cc/160" alt="Candidato" class="foto-candidato">
+                            <div class="dados-candidato">
+                                <h4>Lucas Mendes</h4>
+                                <p>Desenvolvedor Front-end &middot; Avaliação: 4.9 ★</p>
+                            </div>
+                        </div>
+                        <div class="botoes-acao">
+                            <button class="btn-acao btn-aceitar">Aceitar</button>
+                            <a href="mensagens.html" class="btn-acao btn-conversar">Conversar</a>
+                            <button class="btn-acao btn-contato">Entrar em Contato</button>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape-texto">Feito em MINAS GERAIS</p>
+        <p class="rodape-texto"> A base de café e pão de queijo &#9749; &#129472; </p>
+    </footer>
+</body>
+
+</html>

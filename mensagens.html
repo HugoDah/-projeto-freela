@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens | FreelaMG</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho de utilizador logado -->
+    <header class="cabecalho-interno">
+        <div class="logotipo">
+            <a href="vagas.html">Freela<span>MG</span></a>
+        </div>
+
+        <nav class="navegacao-principal">
+            <a href="vagas.html">Encontrar Vagas</a>
+            <span style="color: #475569; margin: 0 0.625rem;">|</span>
+            <a href="talentos.html">Encontrar Talentos</a>
+
+            <!-- Novo link da Área do Recrutador -->
+            <a href="publicar-vaga.html" class="link-area-recrutador">Área do recrutador ➔</a>
+        </nav>
+
+        <nav class="navegacao-usuario">
+            <a href="mensagens.html" style="color: var(--cor-secundaria); font-weight: 700;">Mensagens</a>
+            <a href="notificacoes.html">Notificações</a>
+
+            <!-- Menu de Perfil (Dropdown nativo com CSS) -->
+            <details class="menu-perfil-container">
+                <summary class="botao-perfil-toggle">Meu Perfil</summary>
+
+                <div class="caixa-dropdown-perfil">
+                    <div class="dropdown-cabecalho">
+                        <strong>Nome ficticio</strong>
+                        <span class="modo-texto modo-freelancer">Modo: Freelancer</span>
+                        <span class="modo-texto modo-cliente">Modo: Cliente</span>
+                    </div>
+                    <hr class="divisor-dropdown">
+                    <a href="perfil.html" class="dropdown-item">Ver Meu Perfil</a>
+                    <a href="configuracoes.html" class="dropdown-item">Configurações</a>
+                    <hr class="divisor-dropdown">
+                    <div class="dropdown-item-interruptor">
+                        <span>Freelancer Ativo</span>
+                        <label class="interruptor-estado-pequeno">
+                            <input type="checkbox" id="check-modo-ativo" checked>
+                            <span class="cursor-interruptor-pequeno"></span>
+                        </label>
+                    </div>
+                </div>
+            </details>
+
+            <a href="index.html" class="botao-sair">Sair</a>
+        </nav>
+    </header>
+    <!-- Estrutura Principal do Chat -->
+    <main class="painel-chat">
+
+        <!-- LISTA DE CONVERSAS (Esquerda) -->
+        <aside class="lista-conversas">
+            <h3>Mensagens</h3>
+
+            <div class="conversa-item-ativa">
+                <img src="https://i.pravatar.cc/150" alt="Foto de Perfil" class="chat-foto">
+                <div class="chat-info">
+                    <h4>Nome ficticio</h4>
+                    <p>Combinado! Fico a aguardar o link...</p>
+                </div>
+                <span class="chat-tempo">10:45</span>
+            </div>
+
+            <div class="conversa-item">
+                <img src="https://i.pravatar.cc/160" alt="Foto de Perfil" class="chat-foto">
+                <div class="chat-info">
+                    <h4>Nome Ficticio</h4>
+                    <p>Consegues entregar até sexta-feira?</p>
+                </div>
+                <span class="chat-tempo">Ontem</span>
+            </div>
+
+            <div class="conversa-item">
+                <img src="https://i.pravatar.cc/170" alt="Foto de Perfil" class="chat-foto">
+                <div class="chat-info">
+                    <h4>Nome Ficticio</h4>
+                    <p>Obrigada pela oportunidade no projeto!</p>
+                </div>
+                <span class="chat-tempo">25/09</span>
+            </div>
+        </aside>
+
+        <!-- ÁREA DA CONVERSA ATIVA (Direita) -->
+        <section class="area-conversa">
+
+            <!-- Topo da Conversa -->
+            <div class="chat-topo-ativo">
+                <img src="https://i.pravatar.cc/150" alt="Imagem de uma pessoa aleatoria" class="chat-foto">
+                <div>
+                    <h4>Nome Ficticio</h4>
+                    <p style="font-size: 0.8rem; color: #16a34a;">● Online</p>
+                </div>
+            </div>
+
+            <!-- Histórico de Mensagens -->
+            <div class="mensagens-corpo">
+                <div class="mensagem-recebida">
+                    <p>Olá! Vi a tua candidatura para o ajuste em HTML/CSS no site.</p>
+                    <span class="mensagem-hora">10:30</span>
+                </div>
+
+                <div class="mensagem-enviada">
+                    <p>Olá! Sim, tenho total disponibilidade para começar hoje mesmo se precisar.</p>
+                    <span class="mensagem-hora">10:32</span>
+                </div>
+
+                <div class="mensagem-recebida">
+                    <p>Perfeito! O escopo é rápido. Combinado! Fico a aguardar o link...</p>
+                    <span class="mensagem-hora">10:45</span>
+                </div>
+            </div>
+
+            <!-- Caixa de Envio de Texto -->
+            <div class="chat-envio">
+                <input type="text" placeholder="Escreva a sua mensagem...">
+                <button class="botao-enviar">Enviar</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape-texto">Feito em MINAS GERAIS</p>
+        <p class="rodape-texto"> A base de café e pão de queijo &#9749; &#129472; </p>
+    </footer>
+
+
+</body>
+
+</html>

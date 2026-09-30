@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-secundaria);
+}
+
+:root {
+    --cor-primaria: #305B7D;
+    --cor-secundaria: #E31837;
+    --cor-secundaria-hover: #f02344;
+    --cor-terciaria: #ffffff;
+    --cor-fundo-topo: #0b2239;
+    --cor-fundo-base: #05111e;
+    --cor-fundo-secao: #f8f9fa;
+    --cor-fundo-rodape: #0d1b2a;
+    --cor-texto-escuro: #444444;
+    --cor-texto-secundario: #555555;
+    --cor-texto-mutado: #666666;
+    --cor-texto-claro: #888888;
+    --cor-texto-rodape: #94a3b8;
+    --cor-borda-cinza: #c9c9c9;
+    --cor-borda-cartao: #abacad;
+    --cor-linha-divisoria: #eef0f2;
+    --cor-fundo-hover: #f0f4f8;
+    --cor-fundo-tag: #f4f6f8;
+    --cor-status-aberto-bg: #e6f4ea;
+    --cor-status-aberto-txt: #1e8e3e;
+    --cor-sombra-botao: #e3183759;
+    --cor-sombra-botao-hover: #e318378c;
+    --cor-sombra-botao-active: #e318374d;
+    --cor-sombra-cartao: #0000000a;
+    --cor-sombra-freela: #0363fd87;
+    --cor-sombra-freela-hover: #0363fd;
+    --cor-tag-tec-bg: #e0f2fe;
+    --cor-tag-tec-txt: #0284c7;
+    --cor-tag-design-bg: #f3e8ff;
+    --cor-tag-design-txt: #7e22ce;
+    --cor-tag-escrita-bg: #fef9c3;
+    --cor-tag-escrita-txt: #ca8a04;
+    --cor-tag-negocios-bg: #fee2e2;
+    --cor-tag-negocios-txt: #dc2626;
+    --cor-tag-saude-bg: #dcfce7;
+    --cor-tag-saude-txt: #16a34a;
+    --cor-tag-juridico-bg: #e0e7ff;
+    --cor-tag-juridico-txt: #3730a3;
+    --cor-tag-eng-bg: #fcedeb;
+    --cor-tag-eng-txt: #c97561;
+    --cor-tag-edu-bg: #ccfbf1;
+    --cor-tag-edu-txt: #0f766e;
+    --cor-tag-apoio-bg: #cffafe;
+    --cor-tag-apoio-txt: #0891b2;
+    --fonte-primaria: 'Outfit', sans-serif;
+    --fonte-secundaria: 'Outfit', sans-serif;
+}
+
+.cabecalho {
+    background-color: var(--cor-terciaria);
+    padding: .9375rem 3.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-linha-divisoria);
+}
+
+.cabecalho-logo a {
+    font-family: var(--fonte-primaria);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--cor-fundo-topo);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.cabecalho-logo a span {
+    color: var(--cor-secundaria);
+}
+
+.cabecalho-menu {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho-menu-entrar {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .625rem 1.5rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px var(--cor-sombra-botao);
+}
+
+.cabecalho-menu-entrar:hover {
+    background-color: var(--cor-secundaria-hover);
+    transform: translateY(-.125rem);
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.apresentacao-conteudo {
+    background-image: linear-gradient(to bottom, var(--cor-fundo-topo), var(--cor-fundo-base));
+    padding: 5rem 6.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.apresentacao-supra-titulo {
+    color: var(--cor-secundaria);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.apresentacao-titulo {
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+    font-size: 4.6875rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.apresentacao-sub-titulo {
+    color: var(--cor-terciaria);
+    font-size: 1.5625rem;
+}
+
+.apresentacao-titulo-convite {
+    font-size: 2.5rem;
+    color: var(--cor-terciaria);
+    background-color: var(--cor-secundaria);
+    padding: 1.5rem 3rem;
+    border-radius: 12px;
+    text-decoration: none;
+    width: fit-content;
+    font-family: var(--fonte-secundaria);
+    font-weight: 700;
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 15px var(--cor-sombra-botao);
+}
+
+.apresentacao-titulo-convite:hover {
+    background-color: var(--cor-secundaria-hover);
+    transform: translateY(-.3125rem);
+    box-shadow: 0 10px 25px var(--cor-sombra-botao-hover);
+}
+
+.apresentacao-titulo-convite:active {
+    transform: translateY(-.0625rem);
+    box-shadow: 0 2px 6px var(--cor-sombra-botao-active);
+}
+
+.apresentacao-titulo-freela {
+    color: var(--cor-terciaria);
+    font-size: 1.1rem;
+}
+
+.vagas {
+    padding: 3.75rem 2.5rem;
+    background-color: var(--cor-terciaria);
+}
+
+.vagas-anuncio,
+.vagas-secao {
+    color: var(--cor-fundo-topo);
+    font-family: var(--fonte-primaria);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.vagas-recentes {
+    font-size: 3.125rem;
+}
+
+.vagas-anuncio-secao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .9375rem;
+    max-width: 900px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.vagas-categorias {
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 8px;
+    padding: .9375rem 1.875rem;
+    text-decoration: none;
+    color: var(--cor-fundo-topo);
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.vagas-categorias:hover {
+    border-color: var(--cor-primaria);
+    color: var(--cor-primaria);
+    background-color: var(--cor-fundo-hover);
+    transform: translateY(-.1875rem);
+}
+
+.vagas-rodape {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.vagas-totais {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: opacity 0.2s;
+}
+
+.vagas-totais:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.vagas-recentes-titulo {
+    color: var(--cor-primaria);
+}
+
+.vagas-recentes-texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.25rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.vagas-recentes-grade {
+    display: flex;
+    justify-content: center;
+    padding: 0 3.5rem;
+    gap: .9375rem;
+    flex-wrap: wrap;
+}
+
+.cartao-vaga {
+    background-color: var(--cor-terciaria);
+    border: 1px solid var(--cor-borda-cartao);
+    border-radius: 16px;
+    padding: 1.5625rem;
+    width: 100%;
+max-width: 340px;
+    box-shadow: 0 4px 20px var(--cor-sombra-cartao);
+}
+
+.cartao-vaga-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: .75rem;
+}
+
+.cartao-vaga-categoria {
+    font-size: .8rem;
+    font-weight: 600;
+    padding: .25rem .75rem;
+    border-radius: 20px;
+}
+
+.cartao-vaga-preco-bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cartao-vaga-preco {
+    color: var(--cor-primaria);
+    font-family: var(--fonte-primaria);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cartao-vaga-periodo {
+    color: var(--cor-texto-claro);
+    font-size: .75rem;
+}
+
+.cartao-vaga-funcao {
+    color: var(--cor-fundo-topo);
+    font-family: var(--fonte-primaria);
+    font-size: 1.7rem;
+    margin-bottom: 1.25rem;
+}
+
+.cartao-vaga-empresa-data {
+    display: flex;
+    gap: 3.125rem;
+}
+
+.cartao-vaga-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.cartao-vaga-setor,
+.cartao-vaga-publicado {
+    color: var(--cor-texto-secundario);
+    font-size: .85rem;
+}
+
+.cartao-vaga-local,
+.cartao-vaga-data {
+    color: var(--cor-fundo-topo);
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+.cartao-vaga-local-tempo {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: .9375rem;
+    margin-bottom: 1.25rem;
+}
+
+.cartao-vaga-icone-texto {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    color: var(--cor-primaria);
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.cartao-vaga-requisitos {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 1.25rem;
+}
+
+.cartao-vaga-linha-req {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.cartao-vaga-tag-req,
+.cartao-vaga-tag-extra {
+    background-color: var(--cor-fundo-tag);
+    color: var(--cor-primaria);
+    font-size: .8rem;
+    padding: .375rem .75rem;
+    border-radius: 6px;
+    font-weight: 500;
+    width: fit-content;
+}
+
+.cartao-vaga-linha-divisoria {
+    border: none;
+    border-top: 1px solid var(--cor-linha-divisoria);
+    margin: 1.25rem 0;
+}
+
+.cartao-vaga-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-vaga-avaliacao {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.cartao-vaga-estrelas {
+    color: var(--cor-secundaria);
+    font-size: .9rem;
+    letter-spacing: 2px;
+}
+
+.cartao-vaga-nota {
+    color: var(--cor-texto-secundario);
+    font-size: .85rem;
+}
+
+.cartao-vaga-status {
+    background-color: var(--cor-status-aberto-bg);
+    color: var(--cor-status-aberto-txt);
+    font-size: .8rem;
+    font-weight: 600;
+    padding: .25rem .75rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+}
+
+.cartao-vaga-categoria.tag-tecnologia {
+    background-color: var(--cor-tag-tec-bg);
+    color: var(--cor-tag-tec-txt);
+}
+
+.cartao-vaga-categoria.tag-design {
+    background-color: var(--cor-tag-design-bg);
+    color: var(--cor-tag-design-txt);
+}
+
+.cartao-vaga-categoria.tag-escrita {
+    background-color: var(--cor-tag-escrita-bg);
+    color: var(--cor-tag-escrita-txt);
+}
+
+.cartao-vaga-categoria.tag-negocios {
+    background-color: var(--cor-tag-negocios-bg);
+    color: var(--cor-tag-negocios-txt);
+}
+
+.cartao-vaga-categoria.tag-saude {
+    background-color: var(--cor-tag-saude-bg);
+    color: var(--cor-tag-saude-txt);
+}
+
+.cartao-vaga-categoria.tag-juridico {
+    background-color: var(--cor-tag-juridico-bg);
+    color: var(--cor-tag-juridico-txt);
+}
+
+.cartao-vaga-categoria.tag-engenharia {
+    background-color: var(--cor-tag-eng-bg);
+    color: var(--cor-tag-eng-txt);
+}
+
+.cartao-vaga-categoria.tag-educacao {
+    background-color: var(--cor-tag-edu-bg);
+    color: var(--cor-tag-edu-txt);
+}
+
+.cartao-vaga-categoria.tag-apoio {
+    background-color: var(--cor-tag-apoio-bg);
+    color: var(--cor-tag-apoio-txt);
+}
+
+.freelancers-destaque {
+    padding: 3.75rem 2.5rem;
+    background-color: var(--cor-fundo-secao);
+}
+
+.freelancers-destaque-titulo {
+    text-align: center;
+    margin-bottom: 3.125rem;
+}
+
+.freelancers-destaque-texto {
+    color: var(--cor-primaria);
+    font-size: 2.5rem;
+    font-family: var(--fonte-primaria);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.freelancers-grade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5625rem;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem auto;
+    padding: 0 1.25rem;
+}
+
+.cartao-freela {
+    background: var(--cor-terciaria);
+    padding: 1.5625rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px var(--cor-sombra-freela);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 4px solid var(--cor-primaria);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao-freela:hover {
+    transform: translateY(-.3125rem);
+    box-shadow: 0 8px 20px var(--cor-sombra-freela-hover);
+}
+
+.cartao-freela-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: .9375rem;
+    margin-bottom: 1.25rem;
+}
+
+.cartao-freela-foto {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cartao-freela-info-topo {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.cartao-freela-nome {
+    color: var(--cor-fundo-topo);
+    font-family: var(--fonte-primaria);
+    font-size: 1.3rem;
+}
+
+.cartao-freela-idade-local {
+    color: var(--cor-texto-mutado);
+    font-size: .9rem;
+}
+
+.cartao-freela-avaliacao {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    font-size: .85rem;
+    color: var(--cor-texto-secundario);
+}
+
+.cartao-freela-estrelas {
+    color: var(--cor-secundaria);
+    font-size: .9rem;
+    letter-spacing: 1px;
+}
+
+.cartao-freela-descricao {
+    color: var(--cor-texto-escuro);
+    font-size: .95rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+.cartao-freela-competencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-bottom: 1.25rem;
+}
+
+.cartao-freela-tag {
+    background-color: transparent;
+    color: var(--cor-fundo-topo);
+    border: 1px solid var(--cor-borda-cinza);
+    font-size: .8rem;
+    padding: .25rem .75rem;
+    border-radius: 16px;
+    font-weight: 500;
+}
+
+.cartao-freela-rodape {
+    padding-top: .3125rem;
+}
+
+.cartao-freela-formacao {
+    color: var(--cor-texto-mutado);
+    font-size: .9rem;
+}
+
+.rodape {
+    background-color: var(--cor-fundo-rodape);
+    color: var(--cor-terciaria);
+    text-align: center;
+    padding: 2.5rem 1.25rem;
+    margin-top: 3.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .625rem;
+    border-top: 4px solid var(--cor-secundaria);
+}
+
+.rodape-texto {
+    font-size: .95rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+}
+
+.rodape-texto:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.rodape-texto:last-child {
+    color: var(--cor-texto-rodape);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: .9375rem 1.25rem;
+    }
+
+    .apresentacao-conteudo {
+        padding: 2.5rem 1.25rem;
+        gap: 2.5rem;
+    }
+
+    .apresentacao-supra-titulo {
+        font-size: 1.25rem;
+    }
+
+    .apresentacao-titulo {
+        font-size: 2.5rem;
+    }
+
+    .apresentacao-sub-titulo {
+        font-size: 1.125rem;
+    }
+
+    .apresentacao-titulo-convite {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    .freelancers-grade,
+    .vagas-recentes-grade {
+        grid-template-columns: 1fr;
+        padding: 0 .9375rem;
+    }
+
+    .cartao-vaga {
+        width: 100%;
+    }
+
+    .vagas-recentes-texto,
+    .freelancers-destaque-texto {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+}

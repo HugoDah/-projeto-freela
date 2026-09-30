@@ -1,0 +1,218 @@
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--cor-secundaria);
+}
+
+
+
+.painel-chat {
+    max-width: 1200px;
+    height: calc(100vh - 7.5rem);
+    margin: 1.25rem auto;
+    padding: 0 1.25rem;    
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 1.25rem;
+}
+
+.lista-conversas {
+    background: var(--cor-terciaria);
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda-cinza);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    overflow-y: auto;
+}
+
+.lista-conversas h3 {
+    font-size: 1.3rem;
+    color: var(--cor-fundo-topo);
+    margin-bottom: .3125rem;
+}
+
+.conversa-item-ativa,
+.conversa-item {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem;
+    border-radius: 8px; /* Torna os cantos totalmente retos/quadrados */
+    border: 1px solid var(--cor-borda-mensagem); /* Adiciona a borda a toda a volta */
+    margin-bottom: 0.5rem; /* Separa um contacto do outro para as bordas não se sobreporem */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* O item ativo mantém o destaque azul e ganha uma borda destacada se quiseres */
+.conversa-item-ativa {
+    background-color: var(--cor-fundo-destaque-azul);
+    border-left: 4px solid var(--cor-primaria);
+    border-color: var(--cor-primaria); /* Podes opcionalmente pintar a borda toda de azul no ativo */
+}
+.conversa-item-ativa:hover,
+.conversa-item:hover {
+    background-color: var(--cor-fundo-hover);
+}
+
+.conversa-item-ativa {
+    background-color: var(--cor-fundo-destaque-azul);
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.chat-foto {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.chat-info h4 {
+    font-size: .95rem;
+    color: var(--cor-fundo-topo);
+    margin-bottom: .125rem;
+}
+
+.chat-info p {
+    font-size: .85rem;
+    color: var(--cor-texto-secundario);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-tempo {
+    font-size: .75rem;
+    color: var(--cor-texto-mutado);
+    align-self: flex-start;
+}
+
+.area-conversa {
+    background: var(--cor-terciaria);
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda-cinza);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-topo-ativo {
+    padding: .9375rem 1.25rem;
+    border-bottom: 1px solid var(--cor-borda-cinza);
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    background-color: var(--cor-fundo-app);
+}
+
+.chat-topo-ativo h4 {
+    font-size: 1rem;
+    color: var(--cor-fundo-topo);
+}
+
+.mensagens-corpo {
+    flex: 1;
+    padding: 1.25rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .9375rem;
+    background-color: var(--cor-fundo-chat);
+}
+
+.mensagem-recebida,
+.mensagem-enviada {
+    max-width: 65%;
+    padding: .75rem 1rem;
+    border-radius: 12px;
+    position: relative;
+    font-size: .95rem;
+    line-height: 1.4;
+}
+
+.mensagem-recebida {
+    background-color: var(--cor-fundo-mensagem);
+    color: var(--cor-texto-escuro);
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.mensagem-enviada {
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.mensagem-hora {
+    display: block;
+    font-size: .7rem;
+    margin-top: .25rem;
+    text-align: right;
+    opacity: 0.7;
+}
+
+.chat-envio {
+    padding: .9375rem 1.25rem;
+    border-top: 1px solid var(--cor-borda-cinza);
+    display: flex;
+    gap: .625rem;
+    background-color: var(--cor-fundo-app);
+}
+
+.chat-envio input {
+    flex: 1;
+    padding: .75rem .9375rem;
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 8px;
+    outline: none;
+    font-family: var(--fonte-padrao);
+    font-size: .95rem;
+}
+
+.chat-envio input:focus {
+    border-color: var(--cor-primaria);
+}
+
+.botao-enviar {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    border: none;
+    padding: 0 1.5625rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--fonte-padrao);
+    transition: background-color 0.2s;
+}
+
+.botao-enviar:hover {
+    background-color: var(--cor-secundaria-hover);
+}
+
+@media (max-width: 768px) {
+    .painel-chat {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .lista-conversas {
+        max-height: 250px;
+    }
+
+    .mensagem-recebida,
+    .mensagem-enviada {
+        max-width: 85%;
+    }
+}

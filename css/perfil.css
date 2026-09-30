@@ -1,0 +1,311 @@
+.painel-perfil {
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.875rem;
+    align-items: start;
+}
+
+.menu-lateral-perfil {
+    background: var(--cor-terciaria);
+    border-radius: 16px;
+    border: 1px solid var(--cor-borda-cinza);
+    padding: 1.5625rem;
+    box-shadow: 0 4px 20px var(--sombra-leve);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cabecalho-usuario-perfil {
+    margin-bottom: 1.5625rem;
+    width: 100%;
+    border-bottom: 1px solid var(--cor-borda-cinza);
+    padding-bottom: 1.25rem;
+}
+
+.foto-perfil-usuario {
+    width: 90px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .75rem;
+    border: 3px solid var(--cor-primaria);
+}
+
+.nome-usuario-perfil {
+    font-size: 1.2rem;
+    color: var(--cor-fundo-topo);
+    font-weight: 700;
+    margin-bottom: .25rem;
+}
+
+.tipo-conta-atual {
+    font-size: .85rem;
+    color: var(--cor-texto-secundario);
+}
+
+.lista-opcoes-perfil {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.opcao-menu {
+    display: block;
+    padding: .75rem .9375rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .95rem;
+    color: var(--cor-texto-escuro);
+    background-color: transparent;
+    transition: all 0.2s;
+    text-align: left;
+}
+
+.opcao-menu:hover,
+.opcao-menu.ativa {
+    background-color: var(--cor-fundo-hover);
+    color: var(--cor-primaria);
+}
+
+.opcao-menu.ativa {
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.conteudo-painel-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.bloco-secao-perfil {
+    background: var(--cor-terciaria);
+    border-radius: 16px;
+    border: 1px solid var(--cor-borda-cinza);
+    padding: 1.875rem;
+    box-shadow: 0 4px 20px var(--sombra-leve);
+}
+
+.bloco-secao-perfil h2 {
+    font-size: 1.5rem;
+    color: var(--cor-fundo-topo);
+    font-weight: 800;
+    margin-bottom: .375rem;
+    letter-spacing: -0.5px;
+}
+
+.descricao-secao {
+    font-size: .95rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1.5625rem;
+}
+
+.cartao-visualizacao-perfil {
+    background-color: var(--cor-fundo-cartao);
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 12px;
+    padding: 1.5625rem;
+    border-top: 4px solid var(--cor-primaria);
+}
+
+.topo-cartao-perfil {
+    display: flex;
+    align-items: center;
+    gap: .9375rem;
+    margin-bottom: .9375rem;
+}
+
+.foto-cartao-perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.topo-cartao-perfil h3 {
+    font-size: 1.2rem;
+    color: var(--cor-fundo-topo);
+    font-weight: 700;
+}
+
+.localizacao-perfil {
+    font-size: .85rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: .375rem;
+}
+
+.badge-modo {
+    background-color: var(--cor-fundo-destaque-azul);
+    color: var(--cor-texto-info);
+    font-size: .75rem;
+    font-weight: 700;
+    padding: .25rem .625rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.biografia-perfil {
+    font-size: .95rem;
+    color: var(--cor-texto-escuro);
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+.competencias-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.etiqueta-competencia {
+    border: 1px solid var(--cor-borda-cinza);
+    font-size: .8rem;
+    padding: .25rem .75rem;
+    border-radius: 16px;
+    color: var(--cor-fundo-topo);
+    background-color: var(--cor-terciaria);
+    font-weight: 500;
+}
+
+.caixa-estado-freelancer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-fundo-cartao);
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.caixa-estado-freelancer h4 {
+    font-size: 1.05rem;
+    color: var(--cor-fundo-topo);
+    font-weight: 700;
+    margin-bottom: .25rem;
+}
+
+.caixa-estado-freelancer p {
+    font-size: .85rem;
+    color: var(--cor-texto-secundario);
+}
+
+.interruptor-estado {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.interruptor-estado input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.cursor-interruptor {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--cor-texto-hover);
+    transition: 0.3s;
+    border-radius: 26px;
+}
+
+.cursor-interruptor:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--cor-terciaria);
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.interruptor-estado input:checked+.cursor-interruptor {
+    background-color: var(--cor-primaria);
+}
+
+.interruptor-estado input:checked+.cursor-interruptor:before {
+    transform: translateX(24px);
+}
+
+.formulario-configuracoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.grupo-formulario label {
+    font-weight: 700;
+    font-size: .9rem;
+    color: var(--cor-fundo-topo);
+}
+
+.grupo-formulario input {
+    padding: .75rem .9375rem;
+    border: 1px solid var(--cor-borda-cinza);
+    border-radius: 8px;
+    font-family: var(--fonte-padrao, 'Outfit', sans-serif);
+    font-size: .95rem;
+    outline: none;
+    background-color: var(--cor-fundo-app);
+    transition: border-color 0.2s;
+}
+
+.grupo-formulario input:focus {
+    border-color: var(--cor-primaria);
+}
+
+.botao-salvar-alteracoes {
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    border: none;
+    padding: .75rem 1.5625rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: var(--fonte-padrao, 'Outfit', sans-serif);
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+.botao-salvar-alteracoes:hover {
+    background-color: var(--cor-fundo-topo);
+}
+
+@media (max-width: 768px) {
+    .painel-perfil {
+        grid-template-columns: 1fr;
+        margin: 1.25rem auto;
+    }
+
+    .caixa-estado-freelancer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .9375rem;
+    }
+
+    .topo-cartao-perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+}

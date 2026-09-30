@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+/* =========================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+========================================= */
+
+:root {
+    /* Cores Base */
+    --cor-fundo-topo: #0b2239;
+    --cor-primaria: #305B7D;
+    --cor-primaria-transparente: rgba(48, 91, 125, 0.15);
+    --cor-secundaria: #E31837;
+    --cor-secundaria-media: #e72e4d;
+    --cor-secundaria-clara: #fb798f;
+    --cor-secundaria-transparente: #e318371a;
+    --cor-secundaria-sombra: rgba(227, 24, 55, 0.2);
+    --cor-terciaria: #ffffff;
+
+    /* Textos */
+    --cor-texto-escuro: #1e293b;
+    --cor-texto-secundario: #64748b;
+    --cor-texto-mutado: #94a3b8;
+    --cor-texto-hover: #cbd5e1;
+    --cor-texto-erro: #fca5a5;
+    --cor-texto-sucesso: #16a34a;
+    --cor-texto-info: #0284c7;
+    --cor-texto-aviso: #ca8a04;
+    --cor-texto-sistema: #7e22ce;
+    --cor-texto-rodape: #94a3b8;
+
+    /* Fundos e Superfícies */
+    --cor-fundo-app: #f8fafc;
+    --cor-fundo-secao: #f8f9fa;
+    --cor-fundo-hover: #f1f5f9;
+    --cor-fundo-chat: #fdfdfd;
+    --cor-fundo-cartao: #fafbfc;
+    --cor-fundo-rodape: #0d1b2a;
+    --cor-fundo-alerta: #fff5f5;
+    --cor-fundo-sucesso: #dcfce7;
+    --cor-fundo-destaque-azul: #e0f2fe;
+    --cor-fundo-aviso: #fef9c3;
+    --cor-fundo-sistema: #f3e8ff;
+    --cor-fundo-mensagem: #d8dbdd;
+
+    /* Tags (vagas) */
+    --cor-tag-azul-bg: #e0f2fe;
+    --cor-tag-azul-txt: #0284c7;
+    --cor-tag-roxa-bg: #f3e8ff;
+    --cor-tag-roxa-txt: #7e22ce;
+
+    /* Bordas */
+    --cor-borda-cinza: #8e9195;
+    --cor-borda-suave: #e2e8f0;
+    --cor-borda-input: #d1d5db;
+    --cor-borda-vf: #9ea8b3;
+    --cor-borda-clara: #bdc0c2;
+    --cor-borda-mensagem: #aaaeb4;
+
+    /* Sombras */
+    --sombra-leve: #00000008;
+    --sombra-busca: rgba(0, 0, 0, 0.02);
+    --sombra-media: #0000001a;
+    --sombra-forte: #00000033;
+    --sombra-cartao: rgba(0, 0, 0, 0.04);
+    --sombra-cartao-hover: #0000000d;
+
+    /* Tipografia */
+    --fonte-padrao: 'Outfit', sans-serif;
+    --fonte-secundaria: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor-fundo-app);
+    color: var(--cor-texto-escuro);
+}
+
+/* Faz com que a área principal expanda e empurre sempre o rodapé para o fundo */
+main {
+    flex: 1;
+}
+
+/* =========================================
+   2. ESTILOS DO CABEÇALHO UNIFICADO
+========================================= */
+.cabecalho-interno {
+    background-color: var(--cor-fundo-topo);
+    color: var(--cor-terciaria);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 .25rem .375rem var(--sombra-media);
+}
+
+/* =========================================
+   EFEITOS DE HOVER INTELIGENTES NO CABEÇALHO
+========================================= */
+
+/* 1. Transição suave para TODOS os links do cabeçalho */
+.cabecalho-interno a {
+    transition: color 0.2s ease, opacity 0.2s ease !important;
+}
+
+/* 2. O Recrutador (Estilo Base) */
+.link-area-recrutador {
+    font-size: 0.7rem !important;
+    color: var(--cor-texto-mutado) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 0.5rem;
+}
+
+/* 3. O Recrutador ganha cor Azul vibrante ao passar o rato */
+.link-area-recrutador:hover {
+    color: var(--cor-texto-info) !important;
+    font-weight: 700;
+}
+
+/* 3. A MÁGICA: Só escurece a página ativa se o rato estiver nas NAVs ou no perfil. 
+   O logotipo fica totalmente imune porque não está dentro de uma tag <nav>! */
+.cabecalho-interno:has(nav a:not(.botao-sair):not([style*="--cor-secundaria"]):hover) a[style*="--cor-secundaria"],
+.cabecalho-interno:has(.botao-perfil-toggle:hover) a[style*="--cor-secundaria"] {
+    opacity: 0.4 !important;
+}
+
+/* =========================================
+   ESTRUTURA DOS ELEMENTOS DO TOPO
+========================================= */
+
+.logo,
+.logotipo {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px !important;
+}
+
+.logo a,
+.logotipo a {
+     color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+
+.logo span,
+.logotipo span {
+    color: var(--cor-secundaria);
+}
+
+.navegacao-principal,
+.navegacao-usuario {
+    display: flex;
+    align-items: center;
+    gap: 1.5625rem;
+}
+/* Faz com que TODOS os links (e o botão "Meu Perfil") fiquem azuis ao passar o rato.
+   A regra :not() protege o botão "Sair" e a página ativa (vermelha) para não mudarem de cor. */
+nav a:not(.botao-sair):not([style*="--cor-secundaria"]):hover,
+.botao-perfil-toggle:hover {
+    color: var(--cor-texto-info) !important;
+}
+
+.navegacao-principal a,
+.navegacao-usuario a {
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.navegacao-principal a:hover,
+.navegacao-usuario a:hover {
+    color: var(--cor-texto-hover);
+}
+
+.botao-sair {
+    background-color: var(--cor-secundaria-transparente);
+    color: var(--cor-texto-erro) !important;
+    padding: .375rem .75rem;
+    border-radius: 6px;
+}
+
+.botao-sair:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria) !important;
+}
+
+/* =========================================
+   3. MENU FLUTUANTE DE "MEU PERFIL" (DROPDOWN)
+========================================= */
+.menu-perfil-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-perfil-container summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.menu-perfil-container summary::-webkit-details-marker {
+    display: none;
+}
+
+.botao-perfil-toggle {
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.botao-perfil-toggle:hover {
+    color: var(--cor-texto-hover);
+}
+
+.caixa-dropdown-perfil {
+    position: absolute;
+    right: 0;
+    top: 2.1875rem;
+    background-color: var(--cor-terciaria);
+    min-width: 220px;
+    box-shadow: 0 8px 24px var(--sombra-forte);
+    border-radius: 12px;
+    border: 1px solid var(--cor-borda-cinza);
+    padding: .9375rem;
+    z-index: 1000;
+}
+
+.dropdown-cabecalho {
+    display: flex;
+    flex-direction: column;
+    gap: .125rem;
+    margin-bottom: .5rem;
+}
+
+.dropdown-cabecalho strong {
+    font-size: 0.95rem;
+    color: var(--cor-fundo-topo);
+}
+
+.dropdown-cabecalho span {
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+}
+
+.divisor-dropdown {
+    border: none;
+    border-top: 1px solid var(--cor-borda-cinza);
+    margin: .625rem 0;
+}
+
+.dropdown-item {
+    display: block;
+    padding: .5rem .625rem;
+    color: var(--cor-texto-escuro) !important;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: var(--cor-fundo-hover);
+    color: var(--cor-primaria) !important;
+}
+
+.dropdown-item-interruptor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .25rem .625rem;
+    font-size: 0.9rem;
+    color: var(--cor-texto-escuro);
+    font-weight: 500;
+}
+
+/* Mini interruptor */
+.interruptor-estado-pequeno {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+}
+
+.interruptor-estado-pequeno input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.cursor-interruptor-pequeno {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--cor-texto-hover);
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.cursor-interruptor-pequeno:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--cor-terciaria);
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.interruptor-estado-pequeno input:checked+.cursor-interruptor-pequeno {
+    background-color: var(--cor-primaria);
+}
+
+.interruptor-estado-pequeno input:checked+.cursor-interruptor-pequeno:before {
+    transform: translateX(16px);
+}
+
+.caixa-dropdown-perfil .modo-cliente {
+    display: none;
+}
+
+.caixa-dropdown-perfil .modo-freelancer {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+}
+
+.caixa-dropdown-perfil:has(#check-modo-ativo:not(:checked)) .modo-freelancer {
+    display: none;
+}
+
+.caixa-dropdown-perfil:has(#check-modo-ativo:not(:checked)) .modo-cliente {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--cor-texto-sucesso);
+    font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVO - TELAS ATÉ 768px
+========================================= */
+@media (max-width: 768px) {
+    .cabecalho-interno {
+        flex-direction: column;
+        padding: .9375rem 1.25rem;
+        gap: .9375rem;
+    }
+
+    .navegacao-principal,
+    .navegacao-usuario {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .9375rem;
+    }
+
+    .caixa-dropdown-perfil {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.rodape {
+    background-color: var(--cor-fundo-rodape);
+    color: var(--cor-terciaria);
+    text-align: center;
+    padding: 2.5rem 1.25rem;
+    margin-top: 3.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .625rem;
+    border-top: 4px solid var(--cor-secundaria);
+}
+
+.rodape-texto {
+    font-size: .95rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+}
+
+.rodape-texto:first-child {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.rodape-texto:last-child {
+    color: var(--cor-texto-rodape);
+}

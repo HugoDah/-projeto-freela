@@ -1,0 +1,151 @@
+/* =========================================
+   ESTILOS DA PÁGINA DE NOTIFICAÇÕES
+========================================= */
+
+.painel-notificacoes {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
+}
+
+.conteudo-notificacoes {
+    background: var(--cor-terciaria);
+    border-radius: 16px;
+    border: 1px solid var(--cor-borda-cinza);
+    padding: 1.875rem;
+    box-shadow: 0 4px 20px var(--sombra-leve);
+}
+
+.cabecalho-secao-notificacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5625rem;
+    border-bottom: 1px solid var(--cor-borda-clara);
+    padding-bottom: .9375rem;
+}
+
+.cabecalho-secao-notificacoes h2 {
+    font-size: 1.6rem;
+    color: var(--cor-fundo-topo);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.botao-marcar-lidas {
+    background-color: transparent;
+    color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+    padding: .5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: var(--fonte-padrao, 'Outfit', sans-serif);
+    transition: all 0.2s;
+}
+
+.botao-marcar-lidas:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+}
+
+.lista-notificacoes {
+    display: flex;
+    flex-direction: column;
+    gap: .9375rem;
+}
+
+.cartao-notificacao {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    background-color: var(--cor-fundo-cartao);
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao-notificacao:hover {
+    transform: translateY(-.125rem);
+    box-shadow: 0 4px 12px var(--sombra-cartao-hover);
+}
+
+.cartao-notificacao.cartao-novo {
+    background-color: var(--cor-fundo-alerta);
+    border: 2px solid var(--cor-secundaria);
+}
+
+.cartao-notificacao.cartao-lido {
+    background-color: var(--cor-terciaria);
+    border: 2px solid var(--cor-primaria);
+}
+
+.etiqueta-nova {
+    position: absolute;
+    top: .9375rem;
+    right: 1.25rem;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: .1875rem .5rem;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}
+
+.icone-notificacao {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.icone-notificacao.sucesso {
+    background-color: var(--cor-fundo-sucesso);
+    color: var(--cor-texto-sucesso);
+}
+
+.icone-notificacao.mensagem {
+    background-color: var(--cor-fundo-destaque-azul);
+    color: var(--cor-texto-info);
+}
+
+.icone-notificacao.avaliacao {
+    background-color: var(--cor-fundo-aviso);
+    color: var(--cor-texto-aviso);
+}
+
+.icone-notificacao.sistema {
+    background-color: var(--cor-fundo-sistema);
+    color: var(--cor-texto-sistema);
+}
+
+.detalhes-notificacao {
+    flex: 1;
+}
+
+.detalhes-notificacao h4 {
+    font-size: 1.05rem;
+    color: var(--cor-fundo-topo);
+    margin-bottom: .25rem;
+    font-weight: 700;
+}
+
+.detalhes-notificacao p {
+    font-size: 0.95rem;
+    color: var(--cor-texto-escuro);
+    line-height: 1.5;
+    margin-bottom: .5rem;
+}
+
+.tempo-notificacao {
+    font-size: 0.8rem;
+    color: var(--cor-texto-mutado);
+    font-weight: 500;
+}

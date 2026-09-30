@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações | FreelaMG</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/notificacoes.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho unificado -->
+    <header class="cabecalho-interno">
+        <div class="logotipo">
+            <a href="vagas.html">Freela<span>MG</span></a>
+        </div>
+
+        <nav class="navegacao-principal">
+            <a href="vagas.html">Encontrar Vagas</a>
+            <span style="color: #475569; margin: 0 0.625rem;">|</span>
+            <a href="talentos.html">Encontrar Talentos</a>
+
+            <!-- Novo link da Área do Recrutador -->
+            <a href="publicar-vaga.html" class="link-area-recrutador">Área do recrutador ➔</a>
+        </nav>
+
+        <nav class="navegacao-usuario">
+            <a href="mensagens.html">Mensagens</a>
+            <a href="notificacoes.html" style="color: var(--cor-secundaria); font-weight: 700;">Notificações</a>
+
+            <!-- Menu de Perfil (Dropdown nativo com CSS) -->
+            <details class="menu-perfil-container">
+                <summary class="botao-perfil-toggle">Meu Perfil</summary>
+
+                <div class="caixa-dropdown-perfil">
+                    <div class="dropdown-cabecalho">
+                        <strong>Nome ficticio</strong>
+                        <span class="modo-texto modo-freelancer">Modo: Freelancer</span>
+                        <span class="modo-texto modo-cliente">Modo: Cliente</span>
+                    </div>
+                    <hr class="divisor-dropdown">
+                    <a href="perfil.html" class="dropdown-item">Ver Meu Perfil</a>
+                    <a href="configuracoes.html" class="dropdown-item">Configurações</a>
+                    <hr class="divisor-dropdown">
+                    <div class="dropdown-item-interruptor">
+                        <span>Freelancer Ativo</span>
+                        <label class="interruptor-estado-pequeno">
+                            <input type="checkbox" id="check-modo-ativo" checked>
+                            <span class="cursor-interruptor-pequeno"></span>
+                        </label>
+                    </div>
+                </div>
+            </details>
+
+            <a href="index.html" class="botao-sair">Sair</a>
+        </nav>
+    </header>
+    <!-- Estrutura Principal das Notificações -->
+    <main class="painel-notificacoes">
+
+        <section class="conteudo-notificacoes">
+            <div class="cabecalho-secao-notificacoes">
+                <h2>Suas Notificações</h2>
+                <button class="botao-marcar-lidas">Marcar todas como lidas</button>
+            </div>
+
+            <div class="lista-notificacoes">
+
+                <!-- NOTIFICAÇÃO 1 (Nova - Borda Vermelha) -->
+                <div class="cartao-notificacao cartao-novo">
+                    <span class="etiqueta-nova">NOVA</span>
+                    <div class="icone-notificacao sucesso">✓</div>
+                    <div class="detalhes-notificacao">
+                        <h4>Proposta Aceita</h4>
+                        <p>A empresa <strong>Digital MG</strong> aceitou a sua candidatura para o projeto de
+                            <strong>Desenvolvimento Front-end</strong>.
+                        </p>
+                        <span class="tempo-notificacao">Há 15 minutos</span>
+                    </div>
+                </div>
+
+                <!-- NOTIFICAÇÃO 2 (Nova - Borda Vermelha + Clicável para o Chat) -->
+                <div class="cartao-notificacao cartao-novo" onclick="window.location.href='mensagens.html'"
+                    style="cursor: pointer;">
+                    <span class="etiqueta-nova">NOVA</span>
+                    <div class="icone-notificacao mensagem">💬</div>
+                    <div class="detalhes-notificacao">
+                        <h4>Nova Mensagem</h4>
+                        <p><strong>Nome ficticio</strong> enviou uma nova mensagem no chat sobre o ajuste em HTML/CSS.
+                        </p>
+                        <span class="tempo-notificacao">Há 2 horas</span>
+                    </div>
+                </div>
+
+                <!-- NOTIFICAÇÃO 3 (Lida - Borda Azul) -->
+                <div class="cartao-notificacao cartao-lido">
+                    <div class="icone-notificacao avaliacao">★</div>
+                    <div class="detalhes-notificacao">
+                        <h4>Nova Avaliação Recebida</h4>
+                        <p>Você recebeu uma avaliação de <strong>5.0 estrelas</strong> de um cliente recente em Passos.
+                        </p>
+                        <span class="tempo-notificacao">Ontem</span>
+                    </div>
+                </div>
+
+                <!-- NOTIFICAÇÃO 4 (Lida - Borda Azul) -->
+                <div class="cartao-notificacao cartao-lido">
+                    <div class="icone-notificacao sistema">⚙️</div>
+                    <div class="detalhes-notificacao">
+                        <h4>Atualização da Plataforma</h4>
+                        <p>Novas categorias de engenharia e construção civil foram adicionadas ao FreelaMG.</p>
+                        <span class="tempo-notificacao">25/09/2026</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p class="rodape-texto">Feito em MINAS GERAIS</p>
+        <p class="rodape-texto"> A base de café e pão de queijo &#9749; &#129472; </p>
+    </footer>
+
+</body>
+
+</html>
